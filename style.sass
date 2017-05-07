@@ -1,0 +1,81 @@
+//@import 'variables-mixins'
+//to separate the variables and mixins, delete the variables ($) and the mixins(@) and uncomment the line above this one
+//use @include nicer-h1 on h1
+//use @include nicer-h2 on h2
+//use @include nicer-p on p
+//ex) p will look like this:
+//	p 
+//		@include nicer-p
+//compile
+
+
+$color-chai-tea: #B1832F
+$color-chrysanthemum: #BA4653
+$color-gray-pinstripe: #4A494E
+$color-greenery: #88B04B
+$color-sepia-tint: #897560
+$color-sharkskin: #838487
+$color-tofu: #E8E3D9
+$body-background: #E7B91B
+$padding: 10px
+$font-variable: 'Helvetica Neue', sans-serif
+
+@mixin nicer-h1
+	color: #111
+	font:
+		family: $font-variable
+		size: 275px
+		weight: bold
+	letter-spacing: -1px
+	line-height: 1
+	text-align: center
+
+@mixin nicer-h2
+	color: #111
+	font:
+		family: 'Open Sans', sans-serif
+		size: 30px
+		weight: 300
+	line-height: 32px
+	margin: 10%
+	text-align: center
+
+@mixin nicer-p
+	color: #685206
+	font:
+		family: $font-variable
+		size: 14px
+	line-height: 24px
+	margin: 10%
+	text-align: justify
+	text-justify: inter-word
+	column-count: 2
+	column-gap: 50px
+
+@mixin large-text
+	size: 4em
+	weight: bold
+
+@mixin boring-text
+	color: black
+	font-family: "Times New Roman", Times, serif
+
+
+
+
+	
+
+body
+	background-color: $body-background
+	font-family: "Times New Roman", Times, serif, sans-serif
+	color: #17202A
+	padding: 10px
+
+	h1
+		color: black 
+
+	h2
+		color: blue
+
+	p 
+		color: red
